@@ -1,0 +1,326 @@
+.jd_wrap{
+  width: 100%;
+  height: 1000px;
+  min-width: 300px;
+  max-width: 640px;
+  margin: 0 auto;
+  background-color: #f6f6f6;
+}
+
+//京东头部的搜索栏
+.jd_header_search{
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  background:linear-gradient(black,white);
+}
+
+.jd_header_search_main{
+  width: 100%;
+  height: 40px;
+  min-width: 300px;
+  max-width: 640px;
+  margin: 0 auto;
+  padding:7px 45px 0px 10px;
+  position: relative;
+  > form{
+    background-color: white;
+    width: 100%;
+    height: 30px;
+    border-radius: 30px;
+    padding:0 20px 0 50px;
+    position: relative;
+    >input{
+      width: 100%;
+      height: 100%;
+      padding-left: 1em;
+    }
+    >span{
+      position: absolute;
+      display:inline-block;
+      background-size: contain;
+      &:nth-child(1){
+        width:17.5px;
+        height: 13px;
+        left:10px;
+        top: 10px;
+        background-image: url("../image/jd_logo.png");
+      }
+      &:nth-child(2){
+        width: 12px;
+        height: 12px;
+        left: 35px;
+        top: 10px;
+        background-image: url("../image/jd_search.png");
+      }
+    }
+  }
+  > a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    float:right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+
+  }
+
+}
+
+//京东的轮播图区域
+@img_count:10;
+.jd_lbt{
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  >.imgs{
+    width: 100% * @img_count;
+    overflow: hidden;
+    transform: translateX(-100% / @img_count);
+    >img{
+      width: 100% /@img_count;
+      float:left;
+    }
+  }
+  >.indicator{
+    width: 100%;
+    height: 8px;
+    position: absolute;
+    bottom:8px;
+    line-height: 7px;
+    text-align: center;
+
+    >span{
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border:1px solid white;
+      border-radius: 50%;
+      margin: 0 8px 0 0;
+      &:nth-child(1){
+        background-color: white;
+      }
+    }
+  }
+}
+
+//京东导航栏
+@nav_count:5;
+.jd_nav{
+  width: 100%;
+  margin: 10px 0 10px 0;
+  overflow: hidden;
+  >div{
+    width: 100% / @nav_count;
+    float:left;
+    text-align: center;
+    margin-bottom: 10px;
+
+    >img{
+      width: 29px;
+      height: 29px;
+    }
+    >span{
+      display: inline-block;
+      width: 100%;
+    }
+  }
+}
+
+//京东banner图片区域
+.jd_banner_photo{
+  width: 100%;
+  >img{
+    width: 100%;
+  }
+}
+
+//京东新闻快播区域
+@li_count:5;
+.jd_news{
+  width: 96%;
+  margin:0 8px 8px;
+  background-color: white;
+  border-radius: 8px;
+  >.jd_news_main{
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+
+    >img{
+      width: 73px;
+      height: 16px;
+      margin-left: 5px;
+      float:left;
+      margin-top: 7px;
+    }
+    >div{
+      width: 60%;
+      height: 16px;
+      float:left;
+      margin-top: 7px;
+      overflow: hidden;
+      padding-left: 1em;
+      >ul{
+        width: 100%;
+        height: 100% * @li_count ;
+        animation:move 12s infinite linear;
+        >li{
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+      @keyframes move{
+        0%{
+          transform: translateY(0px);
+        }
+        5%{
+          transform: translateY(-16px);
+        }
+        20%{
+          transform: translateY(-16px);
+        }
+        25%{
+          transform: translateY(-32px);
+        }
+        40%{
+          transform: translateY(-32px);
+        }
+        45%{
+          transform: translateY(-48px);
+        }
+        60%{
+          transform: translateY(-48px);
+        }
+        65%{
+          transform: translateY(-64px);
+        }
+        80%{
+          transform: translateY(-64px);
+        }
+        85%{
+          transform: translateY(-80px);
+        }
+        100%{
+          transform: translateY(-80px);
+        }
+      }
+    }
+    a{
+      width: 30px;
+      height: 18px;
+      float:right;
+      margin: 6px 5px 0 0;
+      border-left: 1px solid #c2c2c2;
+      text-align: center;
+    }
+  }
+}
+
+//京东秒杀区域
+.jd_ms{
+  width: 100%;
+  height: 34px;
+  background-color: white;
+  overflow: hidden;
+  >.jd_ms_left{
+    display: block;
+    width: 70%;
+    height: 34px;
+    float:left;
+    line-height: 34px;
+    overflow: hidden;
+    >img{
+      width: 69px;
+      height: 27px;
+      margin-top: 4px;
+      float: left;
+    }
+    strong{
+      width: 40px;
+      height: 34px;
+      float: left;
+      margin:0 5px 0 10px;
+    }
+    div{
+      display: inline-block;
+      text-align: center;
+    }
+  }
+  >.jd_ms_right{
+    display: block;
+    width: 30%;
+    height: 34px;
+    float:left;
+    padding: 0 22px 0 0;
+    text-align: right;
+    line-height: 34px;
+    color:red;
+    position: relative;
+    >i{
+      position: absolute;
+      width: 11px;
+      height: 11px;
+      display: inline-block;
+      background:url("../image/arrow.png") 0 0 no-repeat;
+      background-size:cover;
+      top: 12px;
+      right: 6px;
+    }
+  }
+
+}
+
+//抢购商品轮播图
+@qg_photo:4;
+.jd_qg_shop{
+  width: 100%;
+  background-color: white;
+  list-style: none;
+  overflow: hidden;
+  >.jd_qg_main{
+    width: 30%*@qg_photo;
+    overflow: hidden;
+    >li{
+      width:100%/@qg_photo;
+      float:left;
+      >.photo{
+        width: 100%;
+        padding:0 10px 0 10px;
+        border-right: 1px solid #cccfff;
+        >img{
+          width: 100%;
+        }
+      }
+      >.num{
+        width: 100%;
+        padding:0 10px 0 10px;
+        margin-top: 11px;
+        >span{
+          font-size: 14px;
+          display: inline-block;
+          width: 100%;
+          text-align: center;
+          &:nth-child(1){
+            font-weight: bold;
+            color:red;
+            font-size: 16px;
+          }
+          &:nth-child(2){
+            margin-bottom: 8px;
+            text-decoration: line-through;
+          }
+        }
+      }
+    }
+  }
+}

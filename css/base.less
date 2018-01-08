@@ -1,0 +1,35 @@
+/*reset css 重置样式*/
+*,
+::before,
+::after {
+  /*所有的元素和伪元素*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+}
+body {
+  font-size: 12px;
+  font-family: sans-serif;
+  color: #333333;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333333;
+}
+input,
+textarea {
+  outline: none;
+  border: none;
+  resize: none;
+  /*清除移动端输入框的样式*/
+  -webkit-appearance: none;
+}
